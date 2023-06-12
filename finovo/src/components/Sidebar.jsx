@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaBuilding, FaChevronRight, FaRegSun, FaTachometerAlt, FaWallet, FaHeadset } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const [showBudgetSubMenu, setShowBudgetSubMenu] = useState(false);
@@ -42,10 +43,10 @@ const Sidebar = () => {
         {showBudgetSubMenu && (
           <div className='pl-[20px]'>
             <ul className='list-disc p1-4 text-white'>
-              <li className='hover:text-blue-300 cursor-pointer'>Budget Planner</li>
-              <li className='hover:text-blue-300 cursor-pointer'>Expense Form</li>
-              <li className='hover:text-blue-300 cursor-pointer'>Expense Items</li>
-              <li className='hover:text-blue-300 cursor-pointer'>Expense List</li>
+              <Link to='/budget-planner'><li className='hover:text-blue-300 cursor-pointer'>Budget Planner</li></Link>
+              <Link to='/expense-form'><li className='hover:text-blue-300 cursor-pointer'>Expense Form</li></Link>
+              <Link to='/expense-items'><li className='hover:text-blue-300 cursor-pointer'>Expense Items</li></Link>
+              <Link to='/expense-list'><li className='hover:text-blue-300 cursor-pointer'>Expense List</li></Link>
             </ul>
           </div>
         )}
@@ -60,8 +61,7 @@ const Sidebar = () => {
         {showFinancialSubMenu && (
           <div className='pl-[20px]'>
             <ul className='list-disc p1-4 text-white'>
-              <li className='hover:text-blue-300 cursor-pointer'>Loan Calculator</li>
-              <li className='hover:text-blue-300 cursor-pointer'>Savings Goal Tracker</li>
+               <Link to='/savings-goal-tracker'><li className='hover:text-blue-300 cursor-pointer'>Savings Goal Tracker</li></Link>
             </ul>
           </div>
         )}
@@ -69,15 +69,14 @@ const Sidebar = () => {
         <div className='flex items-center justify-between gap-[10px] py-[15px] cursor-pointer' onClick={handleBranchSubMenuToggle}>
           <div className='flex items-center gap-[10px]'>
             <FaBuilding color='white' />
-            <p className='text-[14px] leading-[20px] font-normal hover:text-blue-300 text-white'>Branch & Services</p>
+            <p className='text-[14px] leading-[20px] font-normal hover:text-blue-300 text-white'>Other Services</p>
           </div>
           <FaChevronRight color='white' className={showBranchSubMenu ? 'transform rotate-90' : ''} />
         </div>
         {showBranchSubMenu && (
           <div className='pl-[20px]'>
             <ul className='list-disc p1-4 text-white'>
-              <li className='hover:text-blue-300 cursor-pointer'>Branch Locator</li>
-              <li className='hover:text-blue-300 cursor-pointer'>Financial Education</li>
+              <Link to='/financial-education'><li className='hover:text-blue-300 cursor-pointer'>Financial Education</li></Link>
             </ul>
           </div>
         )}
