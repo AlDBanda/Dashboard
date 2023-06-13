@@ -8,6 +8,7 @@ import ExpenseItems from '../Pages/ExpenseItems'
 import ExpenseList from '../Pages/ExpenseList'
 import SavingsGoalTracker from '../Pages/SavingsGoalTracker'
 import FinancialEducation from '../Pages/FinancialEducation'
+import Main2 from '../components/Main2'
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
             <Route path="/expense-list" element={<ExpenseList />} />
             <Route path="/savings-goal-tracker" element={<SavingsGoalTracker />} />
             <Route path="/financial-education" element={<FinancialEducation />} />
+            <Route path="/main-2" element={<Main2 />} />
         </Route>
       </Routes>
       </BrowserRouter>

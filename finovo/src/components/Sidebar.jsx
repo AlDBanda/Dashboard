@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBuilding, FaChevronRight, FaRegSun, FaTachometerAlt, FaWallet, FaHeadset } from 'react-icons/fa';
+import { FaBuilding, FaChevronRight, FaRegSun, FaTachometerAlt, FaWallet, FaHeadset, FaHouseUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -26,8 +26,8 @@ const Sidebar = () => {
       </div>
 
       <div className='flex items-center gap-[15px] py-[20px] border-b-[1px] border-[#EDEDED]/[0.3]'>
-        <FaTachometerAlt color='white' />
-        <p className='text-[14px] leading-[20px] font-bold text-white'>Dashboard</p>
+        <FaHouseUser color='white' />
+        <Link to='/main-2'><p className='text-[14px] leading-[20px] font-bold text-white cursor-pointer'>Dashboard Home</p></Link>
       </div>
 
       <div className='pt-[15px] border-b-[1px] border-[#EDEDED]/[0.3]'>
