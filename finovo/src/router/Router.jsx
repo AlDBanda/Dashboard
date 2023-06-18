@@ -9,6 +9,9 @@ import ExpenseList from '../Pages/ExpenseList'
 import SavingsGoalTracker from '../Pages/SavingsGoalTracker'
 import FinancialEducation from '../Pages/FinancialEducation'
 import Main2 from '../components/Main2'
+import ForgotPassword from '../Pages/ForgotPassword'
+import Register from '../Pages/Register'
+import SignIn from '../Pages/SignIn'
 
 const Router = () => {
   return (
@@ -24,6 +27,9 @@ const Router = () => {
             <Route path="/savings-goal-tracker" element={<SavingsGoalTracker />} />
             <Route path="/financial-education" element={<FinancialEducation />} />
             <Route path="/main-2" element={<Main2 />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/sign-in" element={<SignIn />} />
         </Route>
       </Routes>
       </BrowserRouter>

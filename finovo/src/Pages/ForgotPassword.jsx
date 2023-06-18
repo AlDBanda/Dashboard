@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExpenseForm = () => {
+const ForgotPassword = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const ExpenseForm = () => {
   );
 };
 
-export default ExpenseForm;
+export default ForgotPassword;

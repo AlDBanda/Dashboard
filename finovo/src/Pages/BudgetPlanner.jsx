@@ -31,6 +31,17 @@ const BudgetPlanner = () => {
     return transactions.reduce((total, transaction) => total + transaction.amount, 0);
   };
 
+  const calculateRemainingBudget = () => {
+    const totalSpent = calculateTotal();
+    return totalSpent.toFixed(2);
+  };
+
+  const calculateBudgetLimit = () => {
+    const budgetLimit = 5000; // Set your budget limit here
+    const remainingBudget = budgetLimit - calculateTotal();
+    return remainingBudget.toFixed(2);
+  };
+
   return (
     <div className="max-w-md mx-auto p-4">
       <h2 className="text-2xl font-bold mb-4">Budget Planner</h2>
@@ -78,6 +89,7 @@ const BudgetPlanner = () => {
 
       <div className="mt-4">
         <p className="text-lg font-bold">Total: £{calculateTotal()}</p>
+        <p className="text-lg font-bold">Remaining Budget: £{calculateBudgetLimit()}</p>
       </div>
     </div>
   );
