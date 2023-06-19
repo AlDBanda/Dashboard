@@ -46,8 +46,6 @@ const Sidebar = () => {
             <ul className='list-disc p1-4 text-white'>
               <Link to='/budget-planner'><li className='hover:text-blue-300 cursor-pointer'>Budget Planner</li></Link>
               <Link to='/expense-form'><li className='hover:text-blue-300 cursor-pointer'>Expense Form</li></Link>
-              <Link to='/expense-items'><li className='hover:text-blue-300 cursor-pointer'>Expense Items</li></Link>
-              <Link to='/expense-list'><li className='hover:text-blue-300 cursor-pointer'>Expense List</li></Link>
             </ul>
           </div>
         )}

@@ -1,12 +1,13 @@
 import React from 'react';
-import finovo from '../assets/Finovo.png'
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   return (
-    <div className="flex">
+    <div className="flex items-center justify-center h-screen">
       <div className="w-1/2 p-8">
-        {/* Content for the sign-in form */}
+       <div className='flex items-center justify-center text-blue-500'>
         <h2 className="text-2xl font-bold mb-4">Sign In</h2>
+        </div>
         <form>
           <div className="mb-4">
             <label htmlFor="email" className="block mb-2 font-medium">Email</label>
@@ -30,11 +31,11 @@ const SignIn = () => {
             Sign In with Google
           </button>
         </form>
+        <div className='flex place-items-center justify-center  '>
+        <p> Dont have an account?</p> <Link to='/register'><p className='cursor-pointer text-blue-500'>Register</p></Link>
+        </div>
       </div>
-      <div className="w-1/2">
-        {/* Image to be displayed on the right */}
-        <img src={finovo} alt="Image" className="w-full h-full object-cover" />
-      </div>
+      
     </div>
   );
 };
