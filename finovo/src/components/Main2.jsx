@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFileInvoice, FaReceipt, FaRegCalendarMinus } from 'react-icons/fa';
+import {  FaReceipt, FaRegCalendarMinus } from 'react-icons/fa';
 import { FigureProvider } from './FigureContext';
 
 const Main2 = () => {
@@ -26,12 +26,12 @@ const Main2 = () => {
 
   const calculateTotalOutgoings = () => {
     const totalOutgoings =
-      housing + insurance + groceries + media + debtRepayment + otherEssentials + lifestyleCosts + savings;
+      Number(housing) + Number(insurance) + Number(groceries) + Number(media) + Number(debtRepayment) + Number(otherEssentials) + Number(lifestyleCosts) + Number(savings);
     return totalOutgoings.toFixed(2);
   };
 
   const calculateMoneyLeftover = () => {
-    const moneyLeftover = monthlyEarnings - monthlyOutgoings;
+    const moneyLeftover = Number(monthlyEarnings) - Number(monthlyOutgoings);
     return moneyLeftover.toFixed(2);
   };
 
@@ -52,7 +52,6 @@ const Main2 = () => {
   };
 
   return (
-    <FigureProvider>
       <div className='pt-25px px-25px bg-[#F8F9FC]'>
         <div className='flex items-center justify-between'>
           <h1 className='text-[#5a5c69] text-28px leading-34px font-normal cursor-pointer'>User Dashboard</h1>
@@ -95,7 +94,7 @@ const Main2 = () => {
               />
               <h1 className='text-20px leading-24px font-bold text-[#5a5c69] mt-5px'>£{monthlyOutgoings}</h1>
             </div>
-            <FaReceipt fontSize={28} color='blue' />
+            
           </div>
 
 
@@ -242,11 +241,10 @@ const Main2 = () => {
               <p>{calculateSavingsPercentage()}%</p>
               <progress className='w-full h-3 mt-2' value={calculateSavingsPercentage()} max='20'></progress>
             </div>
-            
+
           </div>
         </div>
       </div>
-    </FigureProvider>
   );
 };
 
